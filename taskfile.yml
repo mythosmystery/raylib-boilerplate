@@ -8,13 +8,6 @@ tasks:
       - cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
       - make
 
-  build-win:
-    desc: "Cross compile the project for windows"
-    dir: "./build"
-    cmds:
-      - cmake -DCMAKE_TOOLCHAIN_FILE=../windows-toolchain.cmake ..
-      - make
-
   clean:
     desc: "Clean the build directory"
     cmds:
@@ -23,7 +16,7 @@ tasks:
   run:
     desc: "Run the project"
     cmds:
-      - ./build/raylib_test
+      - ./build/RaylibTest
     depends: [build]
 
   watch:

@@ -1,6 +1,6 @@
 #define GAME_H
 
-#include "raylib-cpp.hpp"
+#include "raylib.h"
 
 struct Game {
   Game();
@@ -8,6 +8,5 @@ struct Game {
   void draw();
   void update();
 
-  raylib::Color backgroundColor = RAYWHITE;
-  std::unique_ptr<raylib::Window> window;
+  Color backgroundColor = RAYWHITE;
 };
