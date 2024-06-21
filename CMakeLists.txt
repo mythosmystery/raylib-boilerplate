@@ -16,9 +16,9 @@ include(ExternalProject)
 # Define an external project for raylib
 ExternalProject_Add(
     raylib_project
-    PREFIX ${CMAKE_BINARY_DIR}/raylib
+    PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/Vendor/bin/raylib
     SOURCE_DIR ${RAYLIB_DIR}
-    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/raylib
+    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_SOURCE_DIR}/Vendor/bin/raylib
 )
 
 # Specify the paths for the raylib include and library directories
